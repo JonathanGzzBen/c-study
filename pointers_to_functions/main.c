@@ -26,13 +26,13 @@ int main() {
 
     double n = start_value;
     while (n <= end_value) {
+        char *result_str = malloc(30 * sizeof(char));
         for (int i = 0; i < n_mathematical_functions; i++) {
-            char *result_str = NULL;
-            result_str = malloc(30 * sizeof(char));
             sprintf(result_str, "Function %d: %lf", i, mathematical_functions[i](n));
             puts(result_str);
             n += step;
         }
+        free(result_str);
     }
 }
 
