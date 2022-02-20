@@ -22,7 +22,7 @@ int main() {
     const double step = 0.2;
 
     double (*mathematical_functions[])(double) = {f, g, z};
-    const unsigned int n_mathematical_functions = sizeof(mathematical_functions) / sizeof(mathematical_functions[0]);
+    const size_t n_mathematical_functions = sizeof(mathematical_functions) / sizeof(mathematical_functions[0]);
 
     double n = start_value;
     while (n <= end_value) {
