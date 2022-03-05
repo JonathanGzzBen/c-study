@@ -2,7 +2,7 @@
 #define INPUT_H
 #include <stdbool.h>
 
-#include "main.h"
+#include "cuenta_usuario.h"
 
 char* leer_cadena(const size_t len);
 CuentaUsuario leer_cuenta();
