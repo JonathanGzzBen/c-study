@@ -1,3 +1,5 @@
+#include <ctype.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,6 +20,7 @@ static const CuentaUsuario cuentas[];
 char* leer_cadena(const size_t len);
 CuentaUsuario leer_cuenta();
 void print_cuenta(const CuentaUsuario* cuenta);
+int leer_numero();
 
 char* leer_cadena(const size_t len) {
   char* cadena;
@@ -25,6 +28,27 @@ char* leer_cadena(const size_t len) {
   fgets(cadena, len, stdin);
   cadena[strcspn(cadena, "\n")] = 0;
   return cadena;
+}
+
+bool is_str_numeric(size_t len, char str[len]) {
+  for (size_t i = 0; i < len; i++) {
+    if (!isdigit(str[i])) {
+      return false;
+    }
+  }
+  return true;
+}
+
+int leer_numero(char* prompt) {
+  char* cadena;
+  bool done = false;
+  do {
+    printf("%s", prompt);
+    const size_t input_size = 20;
+    cadena = leer_cadena(input_size);
+    done = is_str_numeric(strlen(cadena), cadena);
+  } while (done != true);
+  return atoi(cadena);
 }
 
 CuentaUsuario leer_cuenta() {
@@ -35,6 +59,7 @@ CuentaUsuario leer_cuenta() {
   cuenta.usuario = leer_cadena(LONGITUD_CUENTA_USUARIO);
   printf("Ingrese una contraseña: ");
   cuenta.password = leer_cadena(LONGITUD_CUENTA_PASSWORD);
+  cuenta.edad = leer_numero("Ingrese su edad: ");
   return cuenta;
 }
 
