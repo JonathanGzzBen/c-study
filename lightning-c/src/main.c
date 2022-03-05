@@ -1,26 +1,15 @@
+#include "main.h"
+
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-
-typedef struct {
-  char* nombre;
-  char* usuario;
-  char* password;
-  int edad;
-} CuentaUsuario;
 
 static const size_t LONGITUD_CUENTA_NOMBRE = 20;
 static const size_t LONGITUD_CUENTA_USUARIO = 20;
 static const size_t LONGITUD_CUENTA_PASSWORD = 20;
 
 static const CuentaUsuario cuentas[];
-
-char* leer_cadena(const size_t len);
-CuentaUsuario leer_cuenta();
-void print_cuenta(const CuentaUsuario* cuenta);
-int leer_numero();
 
 char* leer_cadena(const size_t len) {
   char* cadena;
@@ -30,8 +19,8 @@ char* leer_cadena(const size_t len) {
   return cadena;
 }
 
-bool is_str_numeric(size_t len, char str[len]) {
-  for (size_t i = 0; i < len; i++) {
+bool is_str_numeric(char* str) {
+  for (size_t i = 0; str[i] != '\0'; i++) {
     if (!isdigit(str[i])) {
       return false;
     }
@@ -46,7 +35,7 @@ int leer_numero(char* prompt) {
     printf("%s", prompt);
     const size_t input_size = 20;
     cadena = leer_cadena(input_size);
-    done = is_str_numeric(strlen(cadena), cadena);
+    done = is_str_numeric(cadena);
   } while (done != true);
   return atoi(cadena);
 }
