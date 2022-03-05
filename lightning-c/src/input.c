@@ -5,11 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "global.h"
-
-const size_t LONGITUD_CUENTA_NOMBRE = 20;
-const size_t LONGITUD_CUENTA_USUARIO = 20;
-const size_t LONGITUD_CUENTA_PASSWORD = 20;
+static const size_t LONGITUD_CUENTA_NOMBRE = 20;
+static const size_t LONGITUD_CUENTA_USUARIO = 20;
+static const size_t LONGITUD_CUENTA_PASSWORD = 20;
 
 char* leer_cadena(const size_t len) {
   char* cadena;
