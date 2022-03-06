@@ -12,6 +12,7 @@ char* leer_cadena(const size_t len) {
   char* cadena;
   cadena = (char*)malloc(len);
   fgets(cadena, len, stdin);
+  fflush(stdin);
   cadena[strcspn(cadena, "\n")] = 0;
   return cadena;
 }
@@ -30,7 +31,7 @@ int leer_numero(char* prompt) {
   bool done = false;
   do {
     printf("%s", prompt);
-    const size_t input_size = 20;
+    const size_t input_size = 4;
     cadena = leer_cadena(input_size);
     done = is_str_numeric(cadena);
   } while (done != true);
