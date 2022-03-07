@@ -5,9 +5,15 @@
 
 #include "cuenta_usuario.h"
 
+extern const size_t LONGITUD_CUENTA_NOMBRE;
+extern const size_t LONGITUD_CUENTA_USUARIO;
+extern const size_t LONGITUD_CUENTA_PASSWORD;
+
 char* leer_cadena(const size_t len);
 CuentaUsuario leer_cuenta();
-int leer_numero();
-bool is_str_numeric(char* str);
+bool is_str_int(char* str);
+bool is_str_double(char* str);
+int leer_int(char* prompt);
+double leer_double(char* prompt);
 
 #endif  // INPUT_H

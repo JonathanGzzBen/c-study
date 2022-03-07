@@ -6,6 +6,7 @@ typedef struct {
   char* usuario;
   char* password;
   int edad;
+  double saldo;
 } CuentaUsuario;
 
 #endif  // CUENTA_USUARIO_H
