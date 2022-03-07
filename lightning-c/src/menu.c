@@ -50,6 +50,11 @@ int run_menu() {
     }
   } while (!done);
   puts("\nGracias por usar este servicio");
+  for (int i = 0; i < cuentas_len; i++) {
+    free(cuentas[i].nombre);
+    free(cuentas[i].usuario);
+    free(cuentas[i].password);
+  }
   return 0;
 }
 
