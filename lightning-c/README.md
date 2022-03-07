@@ -5,9 +5,9 @@ En este lightning (live de bajo presupuesto) les enseñaré a realizar tareas co
 La especificación (cosas que puede hacer el usuario) de nuestro sistema es el siguiente:
 
 - Crearse una cuenta especificando su nombre y edad, usuario y password.
-  - El nombre no debe incluir números y debe tener una longitud mayor a 1.
+  - El nombre debe tener una longitud mayor a 1.
   - La edad debe de ser un valor entero.
-  - El usuario no debe contener espacios y debe tener una longitud mayor a 1.
+  - El usuario debe tener una longitud mayor a 1.
   - La contraseña debe tener una longitud mayor a 1.
 - Iniciar sesion a su cuenta.
   - Debe especificar usuario y password, y tienen que corresponder a una cuenta registrada.
