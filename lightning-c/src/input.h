@@ -9,7 +9,7 @@ extern const size_t LONGITUD_CUENTA_NOMBRE;
 extern const size_t LONGITUD_CUENTA_USUARIO;
 extern const size_t LONGITUD_CUENTA_PASSWORD;
 
-char* leer_cadena(const size_t len);
+char* leer_cadena(char* prompt, const size_t len);
 CuentaUsuario leer_cuenta();
 bool is_str_int(char* str);
 bool is_str_double(char* str);

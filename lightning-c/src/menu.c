@@ -49,7 +49,7 @@ int run_menu() {
         break;
     }
   } while (!done);
-  puts("\nGracias por usar este servicio");
+  puts("\nGracias por usar este servicio.");
   for (int i = 0; i < cuentas_len; i++) {
     free(cuentas[i].nombre);
     free(cuentas[i].usuario);
@@ -73,12 +73,11 @@ void crear_cuenta() {
 
 void iniciar_sesion() {
   if (cuenta_activa != NULL) {
-    puts("\nSesión ya activa\n");
+    puts("\nSesión ya activa.\n");
+    return;
   }
-  fputs("\nIngrese usuario: ", stdout);
-  char *usuario = leer_cadena(LONGITUD_CUENTA_USUARIO);
-  fputs("Ingrese password: ", stdout);
-  char *password = leer_cadena(LONGITUD_CUENTA_PASSWORD);
+  char *usuario = leer_cadena("Ingrese usuario: ", LONGITUD_CUENTA_USUARIO);
+  char *password = leer_cadena("Ingrese password: ", LONGITUD_CUENTA_PASSWORD);
   for (int i = 0; i < cuentas_len; ++i) {
     if (strncmp(cuentas[i].usuario, usuario, LONGITUD_CUENTA_USUARIO) == 0 &&
         strncmp(cuentas[i].password, password, LONGITUD_CUENTA_USUARIO) == 0) {
@@ -126,7 +125,7 @@ void consultar_saldo_actual() {
 
 void print_cuenta(const CuentaUsuario *cuenta) {
   printf(
-      "Nombre: %-25sUsuario: %-25sContraseña: %-25sEdad: %-3dSaldo: %-10.2f\n",
+      "Nombre: %-25sUsuario: %-25sContraseña: %-25sEdad: %-5dSaldo: %-10.2f\n",
       cuenta->nombre, cuenta->usuario, cuenta->password, cuenta->edad);
 }
 
