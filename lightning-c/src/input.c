@@ -42,24 +42,26 @@ int leer_int(char* prompt) {
   char* cadena;
   bool done = false;
   do {
-    // printf("%s", prompt);
     const size_t input_size = 4;
     cadena = leer_cadena(prompt, input_size);
     done = is_str_int(cadena);
   } while (done != true);
-  return atoi(cadena);
+  int value = atoi(cadena);
+  free(cadena);
+  return value;
 }
 
 double leer_double(char* prompt) {
   char* cadena;
   bool done = false;
   do {
-    // printf("%s", prompt);
     const size_t input_size = 10;
     cadena = leer_cadena(prompt, input_size);
     done = is_str_double(cadena);
   } while (done != true);
-  return atof(cadena);
+  double value = atof(cadena);
+  free(cadena);
+  return value;
 }
 
 CuentaUsuario leer_cuenta() {
