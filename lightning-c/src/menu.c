@@ -123,7 +123,7 @@ void consultar_saldo_actual() {
          cuenta_activa->saldo);
 }
 
-void print_cuenta(const CuentaUsuario *cuenta) {
+void print_cuenta(const CuentaUsuario const *cuenta) {
   printf(
       "Nombre: %-25sUsuario: %-25sContraseña: %-25sEdad: %-5dSaldo: %-10.2f\n",
       cuenta->nombre, cuenta->usuario, cuenta->password, cuenta->edad,

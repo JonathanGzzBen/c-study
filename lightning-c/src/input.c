@@ -8,7 +8,7 @@ const size_t LONGITUD_CUENTA_NOMBRE = 20;
 const size_t LONGITUD_CUENTA_USUARIO = 20;
 const size_t LONGITUD_CUENTA_PASSWORD = 20;
 
-char* leer_cadena(char* prompt, const size_t len) {
+char* leer_cadena(const char* const prompt, const size_t len) {
   char* cadena;
   cadena = (char*)malloc(len);
   do {
@@ -20,7 +20,7 @@ char* leer_cadena(char* prompt, const size_t len) {
   return cadena;
 }
 
-bool is_str_int(char* str) {
+bool is_str_int(const char* const str) {
   for (size_t i = 0; str[i] != '\0'; i++) {
     if (!isdigit(str[i])) {
       return false;
@@ -29,7 +29,7 @@ bool is_str_int(char* str) {
   return true;
 }
 
-bool is_str_double(char* str) {
+bool is_str_double(const char* const str) {
   for (size_t i = 0; str[i] != '\0'; i++) {
     if (!(isdigit(str[i]) || str[i] == '.')) {
       return false;
@@ -38,7 +38,7 @@ bool is_str_double(char* str) {
   return true;
 }
 
-int leer_int(char* prompt) {
+int leer_int(const char* const prompt) {
   char* cadena;
   bool done = false;
   do {
@@ -51,7 +51,7 @@ int leer_int(char* prompt) {
   return value;
 }
 
-double leer_double(char* prompt) {
+double leer_double(const char* const prompt) {
   char* cadena;
   bool done = false;
   do {

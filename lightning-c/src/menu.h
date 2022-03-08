@@ -10,7 +10,7 @@ void iniciar_sesion();
 void depositar();
 void retirar();
 void consultar_saldo_actual();
-void print_cuenta(const CuentaUsuario* cuenta);
+void print_cuenta(const CuentaUsuario* const cuenta);
 void cerrar_sesion();
 void imprimir_cuentas();
 
