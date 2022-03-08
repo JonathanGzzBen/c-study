@@ -109,7 +109,7 @@ void retirar() {
   if (cuenta_activa->saldo - monto_a_retirar < 0) {
     puts("\nSaldo insuficiente\n");
   } else {
-    cuenta_activa->saldo += monto_a_retirar;
+    cuenta_activa->saldo -= monto_a_retirar;
     printf("\n$%.2lf retirados\n\n", monto_a_retirar);
   }
 }
