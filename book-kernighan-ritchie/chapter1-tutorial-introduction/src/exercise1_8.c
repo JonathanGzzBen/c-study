@@ -4,8 +4,10 @@
 #include <stdio.h>
 
 int main(void) {
-    char c;
-    int blanks = 0, tabs = 0, newlines = 0;
+    int c;
+    int blanks = 0;
+    int tabs = 0;
+    int newlines = 0;
     printf("Enter something: ");
     while((c = getchar()) != EOF) {
         printf("Enter something: ");
