@@ -10,7 +10,7 @@ const size_t LONGITUD_CUENTA_PASSWORD = 20;
 
 char* leer_cadena(const char* const prompt, const size_t len) {
   char* cadena;
-  cadena = (char*)malloc(len);
+  cadena = (char*)malloc(sizeof(char) * len);
   do {
     fputs(prompt, stdout);
     fgets(cadena, len, stdin);
