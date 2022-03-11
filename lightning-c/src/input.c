@@ -17,6 +17,7 @@ char* leer_cadena(const char* const prompt, const size_t len) {
     fflush(stdin);
   } while (cadena[0] == '\n');
   cadena[strcspn(cadena, "\n")] = '\0';
+  cadena = (char*)realloc(cadena, strlen(cadena));
   return cadena;
 }
 
