@@ -10,10 +10,11 @@ const size_t LONGITUD_CUENTA_PASSWORD = 20;
 
 char* leer_cadena(const char* const prompt, const size_t len) {
   char* cadena;
-  cadena = (char*)malloc(sizeof(char) * len);
+  // len + '\n' + '\0'
+  cadena = (char*)malloc((sizeof(char) * len) + 2);
   do {
     fputs(prompt, stdout);
-    fgets(cadena, len, stdin);
+    fgets(cadena, len + 1, stdin);
     fflush(stdin);
   } while (cadena[0] == '\n');
   cadena[strcspn(cadena, "\n")] = '\0';
