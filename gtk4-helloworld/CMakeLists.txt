@@ -6,5 +6,5 @@ include_directories(${GTK4_INCLUDE_DIRS})
 link_directories(${GTK4_LIBRARY_DIRS})
 add_definitions(${GTK4_CFLAGS_OTHER})
 
-add_executable(simple simple.c)
-target_link_libraries(simple ${GTK4_LIBRARIES})
+add_executable(hello-world hello-world.c)
+target_link_libraries(hello-world ${GTK4_LIBRARIES})
