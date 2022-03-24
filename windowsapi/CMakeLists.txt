@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.11)
+project(windowsapi LANGUAGES C)
+set(C_STANDARD 17)
+add_executable(window-title WIN32 windowtitle/main.c)
+add_executable(screen-size screen-size/main.c)
