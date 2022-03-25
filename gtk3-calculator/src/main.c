@@ -1,7 +1,7 @@
 #include <gtk/gtk.h>
 #include <stdio.h>
 
-G_MODULE_EXPORT void print_hello(GtkButton *self, gpointer user_data) {
+G_MODULE_EXPORT void print_hello() {
   puts("hello");
 }
 
