@@ -69,11 +69,12 @@
             <property name="row-homogeneous">True</property>
             <property name="column-homogeneous">True</property>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-7">
                 <property name="label" translatable="yes">7</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -81,11 +82,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-8">
                 <property name="label" translatable="yes">8</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -93,11 +95,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-9">
                 <property name="label" translatable="yes">9</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -105,11 +108,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-multiplication">
                 <property name="label" translatable="yes">*</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">3</property>
@@ -117,11 +121,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-4">
                 <property name="label" translatable="yes">4</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -129,11 +134,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-5">
                 <property name="label" translatable="yes">5</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -141,11 +147,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-6">
                 <property name="label" translatable="yes">6</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -153,11 +160,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-substraction">
                 <property name="label" translatable="yes">-</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">3</property>
@@ -165,11 +173,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-1">
                 <property name="label" translatable="yes">1</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -177,11 +186,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-2">
                 <property name="label" translatable="yes">2</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -189,11 +199,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-3">
                 <property name="label" translatable="yes">3</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -201,11 +212,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-addition">
                 <property name="label" translatable="yes">+</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">3</property>
@@ -226,11 +238,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-0">
                 <property name="label" translatable="yes">0</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -238,11 +251,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-point">
                 <property name="label" translatable="yes">.</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -250,12 +264,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-equals">
                 <property name="label" translatable="yes">=</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
-                <signal name="clicked" handler="print_hello" swapped="no"/>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">3</property>
@@ -263,11 +277,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-modulus">
                 <property name="label" translatable="yes">%</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">0</property>
@@ -275,11 +290,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-ce">
                 <property name="label" translatable="yes">CE</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">1</property>
@@ -287,11 +303,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-c">
                 <property name="label" translatable="yes">C</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">2</property>
@@ -299,11 +316,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="btn-division">
                 <property name="label" translatable="yes">/</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
+                <signal name="clicked" handler="on_pressed_button" swapped="no"/>
               </object>
               <packing>
                 <property name="left-attach">3</property>
