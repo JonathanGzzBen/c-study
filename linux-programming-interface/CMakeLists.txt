@@ -13,3 +13,4 @@ add_library(linux_programming_interface_lib
         lib/get_num.h lib/get_num.c)
 
 add_subdirectory(fileio)
+add_subdirectory(tee_command)
