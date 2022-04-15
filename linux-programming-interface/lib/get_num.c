@@ -45,6 +45,8 @@ getNum (const char *fname, const char *arg, int flags, const char *name)
 
   if ((flags & GN_GT_0) && res <= 0)
     gnFail (fname, "value must be > 0", arg, name);
+
+  return res;
 }
 
 long
