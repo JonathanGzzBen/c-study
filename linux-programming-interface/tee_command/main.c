@@ -37,7 +37,7 @@ main (int argc, char *argv[])
   const char *filename = argv[optind];
 
   int openFlags = O_RDWR | O_CREAT;
-  openFlags = append ? (openFlags | O_APPEND) : (openFlags | O_TRUNC);
+  openFlags |= append ? O_APPEND : O_TRUNC;
 
   int outputFileFd = open (filename, openFlags,
                            S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH
