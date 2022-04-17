@@ -14,3 +14,4 @@ add_library(linux_programming_interface_lib
 
 add_subdirectory(fileio)
 add_subdirectory(tee_command)
+add_subdirectory(cp_holes)
