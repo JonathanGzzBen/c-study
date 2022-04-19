@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.21)
+project(compare_offset_and_flags)
+
+add_executable(compare_offset_and_flags main.c)
+target_link_libraries(compare_offset_and_flags linux_programming_interface_lib)
