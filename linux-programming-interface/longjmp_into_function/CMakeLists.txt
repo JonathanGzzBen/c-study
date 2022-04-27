@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.21)
+project(longjmp_into_function)
+
+add_executable(longjmp_into_function main.c)
+target_link_libraries(longjmp_into_function linux_programming_interface_lib)
