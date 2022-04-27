@@ -32,8 +32,9 @@ m_setenv (const char *name, const char *value, int overwrite)
 int
 m_unsetenv (const char *name)
 {
+  size_t nameLen = strlen (name);
   for (char **ep = environ; *ep != NULL; ep++)
-    if (strncmp (*ep, name, strlen (name)) == 0)
+    if (strncmp (*ep, name, nameLen) == 0 && *ep[nameLen] != '=')
       {
         char **moveEnvPointersDown = ep;
         do
@@ -57,10 +58,10 @@ main (void)
   m_setenv ("Comes", "dura", 0);
   m_setenv ("Comes", "dura", 0);
   m_setenv ("Atelier", "Sophie", 0);
-  puts("Initial environment:");
+  puts ("Initial environment:");
   print_env ();
   m_unsetenv ("Comes");
-  puts("Final environment:");
+  puts ("Final environment:");
   print_env ();
   return 0;
 }
