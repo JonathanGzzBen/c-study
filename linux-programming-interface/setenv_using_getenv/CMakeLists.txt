@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.21)
+project(setenv_using_getenv)
+
+add_executable(setenv_using_getenv main.c)
+target_link_libraries(setenv_using_getenv linux_programming_interface_lib)
