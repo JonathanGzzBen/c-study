@@ -1,5 +1,6 @@
 [requires]
 zeromq/4.3.4
+cppzmq/4.8.1
 
 [generators]
 cmake
